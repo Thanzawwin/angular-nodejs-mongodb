@@ -1,0 +1,17 @@
+<div class="container mt-4 bg-light">
+  <div class="row">
+    <div 
+    class="col-md-6"
+    *ngFor="let post of posts"
+    >
+     <div class="card card-body m-2">
+       <h4>
+         <a routerLink="/post-one/{{post._id}}">{{post.title}}</a>
+       </h4>
+       <strong>{{post.author}}</strong>
+       <br />
+       <p>{{post.body.substring(0,150)}}</p>
+     </div>
+    </div>
+  </div>
+</div>

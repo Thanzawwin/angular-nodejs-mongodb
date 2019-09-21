@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Date</th>
+        <th>Edit</th>
+        <th>Del</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+      *ngFor="let post of posts"
+      >
+        <td>{{post.title}}</td>
+        <td>{{post.author}}</td>
+        <td>{{post.date}}</td>
+        <td>edit</td>
+        <td>
+          <button (click)="postDel(post._id)" class="btn btn-danger btn-sm">Del</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
